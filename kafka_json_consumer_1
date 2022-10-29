@@ -69,7 +69,7 @@ def main(topic):
             # SIGINT can't be handled when polling, limit timeout to 1 second.
             msg = consumer.poll(1.0)
             if msg is None:
-                print('No of records consumed by consumer 2: ' + str(count))
+                print('No of records consumed by consumer 1: ' + str(count))
                 continue
             order = json_deserializer(msg.value(), SerializationContext(msg.topic(), MessageField.VALUE))
 
